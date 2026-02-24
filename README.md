@@ -10,3 +10,5 @@ Users can:
 - Copy the final report with one click
 
 The goal of this project was to practice DOM manipulation, event handling, dynamic rendering, and state management using pure JavaScript without frameworks.
+
+# [Report Generator](https://andrewarocha.github.io/BDC-Report-maker/)  
