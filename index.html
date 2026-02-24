@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BDC Report Generator</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <header class="header">
+    <nav class="nav">
+      <img src="/NJX.avif" alt="logo" />
+    </nav>
+    <div class="reportHeader">
+      <h1 class="reportTitle">BDC Report Generator</h1>
+    </div>
+  </header>
+  <body>
+    <main class="container">
+      <section class="reportForm">
+        <button class="toggle-btn" onclick="toggleDarkMode()">
+          Toggle Dark Mode
+        </button>
+        <form class="reportForm__inputs" id="reportForm">
+          <label for="date">Date</label>
+          <input id="date" type="text" placeholder="Feb 19" />
+
+          <label for="dealerName">Dealer Name</label>
+          <input id="dealerName" type="text" placeholder="NJ Auto Xchange" />
+
+          <label for="leadsMTD">Leads MTD</label>
+          <input id="leadsMTD" type="number" />
+
+          <label for="appointmentsYesterday">Appointments Yesterday</label>
+          <input id="appointmentsYesterday" type="number" />
+
+          <label for="appointmentsMTD">Appointments MTD</label>
+          <input id="appointmentsMTD" type="number" />
+
+          <label for="calls">Call Count</label>
+          <input id="calls" type="number" />
+
+          <label for="emails">Email Count</label>
+          <input id="emails" type="number" />
+
+          <label for="sms">SMS Count</label>
+          <input id="sms" type="number" />
+
+          <label for="dealsDelivered">Deals Delivered</label>
+          <input id="dealsDelivered" type="number" />
+
+          <label for="carsDelivered">Cars Delivered</label>
+          <input id="carsDelivered" type="number" />
+
+          <label for="inventory">Inventory</label>
+          <input id="inventory" type="number" />
+
+          <button type="button" onclick="generateReport()">
+            Generate Report
+          </button>
+          <button type="button" onclick="copyReport()">
+            Copy to Clipboard
+          </button>
+
+          <textarea id="output"></textarea>
+        </form>
+      </section>
+
+      <h2 class="reportAppointmentTitle">Appointment Report Generator</h2>
+
+      <section class="appointmentsForm__section">
+        <form class="appointmentsForm" id="appointmentForm">
+          <label class="appointmentsForm__label" for="reportDate">Date:</label>
+          <input class="appointmentsForm__input" type="date" id="reportDate" />
+
+          <label class="appointmentsForm__label" for="dealership"
+            >Dealership Name:</label
+          >
+          <input class="appointmentsForm__input" type="text" id="dealership" />
+
+          <label class="appointmentsForm__label" for="saturdayMade"
+            >Saturday appointments made:</label
+          >
+          <input
+            class="appointmentsForm__input"
+            type="number"
+            id="saturdayMade"
+          />
+
+          <label class="appointmentsForm__label" for="saturdayTotal"
+            >Saturday appointments total:</label
+          >
+          <input
+            class="appointmentsForm__input"
+            type="number"
+            id="saturdayTotal"
+          />
+
+          <label class="appointmentsForm__label" for="name">First Name:</label>
+          <input class="appointmentsForm__input" type="text" id="name" />
+
+          <label class="appointmentsForm__label" for="lastName"
+            >Last Name:</label
+          >
+          <input class="appointmentsForm__input" type="text" id="lastName" />
+
+          <label class="appointmentsForm__label" for="phone">Phone:</label>
+          <input class="appointmentsForm__input" type="text" id="phone" />
+
+          <label class="appointmentsForm__label" for="vehicle">Vehicle:</label>
+          <input class="appointmentsForm__input" type="text" id="vehicle" />
+
+          <label class="appointmentsForm__label" for="time">Time:</label>
+          <input class="appointmentsForm__input" type="time" id="time" />
+
+          <label class="appointmentsForm__label" for="type"
+            >Appointment Type:</label
+          >
+          <select class="appointmentsForm__input" id="type">
+            <option value="same">Same-Day</option>
+            <option value="next">Next-Day</option>
+          </select>
+
+          <button
+            class="appointmentsForm__button add"
+            type="button"
+            id="addBtn"
+          >
+            Add Appointment
+          </button>
+
+          <h3 class="appointmentsForm__listTitle">Appointments List</h3>
+          <ul id="appointmentList"></ul>
+
+          <p>Same-Day Total: <span id="sameCount">0</span></p>
+          <p>Next-Day Total: <span id="nextCount">0</span></p>
+
+          <div class="button-row">
+            <button
+              class="appointmentsForm__button"
+              type="button"
+              id="generateBtn"
+            >
+              Generate Report
+            </button>
+            <button class="appointmentsForm__button" type="button" id="copyBtn">
+              Copy Report
+            </button>
+          </div>
+
+          <textarea
+            class="appointmentsForm__input" id="appointmentOutput"
+            rows="15"
+            cols="80"
+          ></textarea>
+        </form>
+      </section>
+    </main>
+  </body>
+  <footer> <div></div></footer>
+</html>
