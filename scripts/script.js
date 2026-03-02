@@ -108,7 +108,7 @@ function renderAppointments() {
     if (appt.type === "next") nextCounter++;
 
     let li = document.createElement("li");
-    li.classList.add(`appointmentAddList`);
+    li.classList.add(`appointments__list-add`);
     li.innerHTML = `
             ${appt.name} ${appt.lastName} — ${appt.phone} — ${appt.vehicle} — ${appt.time} (${appt.type})\n
             <button data-edit="${index}">Edit</button>\n

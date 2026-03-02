@@ -3,159 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <title>BDC Report Generator</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/normalize.css" />
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
   </head>
-  <header class="header">
-    <nav class="nav">
-      <img src="/NJX.avif" alt="logo" />
-    </nav>
-    <div class="reportHeader">
-      <h1 class="reportTitle">BDC Report Generator</h1>
-    </div>
-  </header>
-  <body>
-    <main class="container">
-      <section class="reportForm">
-        <button class="toggle-btn" onclick="toggleDarkMode()">
+
+  <body class="page">
+    <header class="page-header">
+      <nav class="page-header__nav">
+        <img class="page-header__logo" src="./assets/images/NJX.avif" alt="logo" />
+      </nav>
+      <div class="page-header__title-wrapper">
+        <h1 class="page-header__title">BDC Report Generator</h1>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="report">
+        <button class="report__toggle" type="button" onclick="toggleDarkMode()">
           Toggle Dark Mode
         </button>
-        <form class="reportForm__inputs" id="reportForm">
-          <label for="date">Date</label>
-          <input id="date" type="text" placeholder="Feb 19" />
 
-          <label for="dealerName">Dealer Name</label>
-          <input id="dealerName" type="text" placeholder="NJ Auto Xchange" />
+        <form class="report__form" id="reportForm">
+          <label class="report__label" for="date">Date</label>
+          <input class="report__input" id="date" type="text" placeholder="Feb 19" />
 
-          <label for="leadsMTD">Leads MTD</label>
-          <input id="leadsMTD" type="number" />
+          <label class="report__label" for="dealerName">Dealer Name</label>
+          <input class="report__input" id="dealerName" type="text" placeholder="NJ Auto Xchange" />
 
-          <label for="appointmentsYesterday">Appointments Yesterday</label>
-          <input id="appointmentsYesterday" type="number" />
+          <label class="report__label" for="leadsMTD">Leads MTD</label>
+          <input class="report__input" id="leadsMTD" type="number" />
 
-          <label for="appointmentsMTD">Appointments MTD</label>
-          <input id="appointmentsMTD" type="number" />
+          <label class="report__label" for="appointmentsYesterday">Appointments Yesterday</label>
+          <input class="report__input" id="appointmentsYesterday" type="number" />
 
-          <label for="calls">Call Count</label>
-          <input id="calls" type="number" />
+          <label class="report__label" for="appointmentsMTD">Appointments MTD</label>
+          <input class="report__input" id="appointmentsMTD" type="number" />
 
-          <label for="emails">Email Count</label>
-          <input id="emails" type="number" />
+          <label class="report__label" for="calls">Call Count</label>
+          <input class="report__input" id="calls" type="number" />
 
-          <label for="sms">SMS Count</label>
-          <input id="sms" type="number" />
+          <label class="report__label" for="emails">Email Count</label>
+          <input class="report__input" id="emails" type="number" />
 
-          <label for="dealsDelivered">Deals Delivered</label>
-          <input id="dealsDelivered" type="number" />
+          <label class="report__label" for="sms">SMS Count</label>
+          <input class="report__input" id="sms" type="number" />
 
-          <label for="carsDelivered">Cars Delivered</label>
-          <input id="carsDelivered" type="number" />
+          <label class="report__label" for="dealsDelivered">Deals Delivered</label>
+          <input class="report__input" id="dealsDelivered" type="number" />
 
-          <label for="inventory">Inventory</label>
-          <input id="inventory" type="number" />
+          <label class="report__label" for="carsDelivered">Cars Delivered</label>
+          <input class="report__input" id="carsDelivered" type="number" />
 
-          <button type="button" onclick="generateReport()">
-            Generate Report
-          </button>
-          <button type="button" onclick="copyReport()">
-            Copy to Clipboard
-          </button>
+          <label class="report__label" for="inventory">Inventory</label>
+          <input class="report__input" id="inventory" type="number" />
 
-          <textarea id="output"></textarea>
+          <div class="report__actions">
+            <button class="report__button" type="button" onclick="generateReport()">Generate Report</button>
+            <button class="report__button" type="button" onclick="copyReport()">Copy to Clipboard</button>
+          </div>
+
+          <textarea class="report__output" id="output"></textarea>
         </form>
       </section>
 
-      <h2 class="reportAppointmentTitle">Appointment Report Generator</h2>
+      <h2 class="appointments__title">Appointment Report Generator</h2>
 
-      <section class="appointmentsForm__section">
-        <form class="appointmentsForm" id="appointmentForm">
-          <label class="appointmentsForm__label" for="reportDate">Date:</label>
-          <input class="appointmentsForm__input" type="date" id="reportDate" />
+      <section class="appointments">
+        <form class="appointments__form" id="appointmentForm">
+          <label class="appointments__label" for="reportDate">Date</label>
+          <input class="appointments__input" type="date" id="reportDate" />
 
-          <label class="appointmentsForm__label" for="dealership"
-            >Dealership Name:</label
-          >
-          <input class="appointmentsForm__input" type="text" id="dealership" />
+          <label class="appointments__label" for="dealership">Dealership Name</label>
+          <input class="appointments__input" type="text" id="dealership" />
 
-          <label class="appointmentsForm__label" for="saturdayMade"
-            >Saturday appointments made:</label
-          >
-          <input
-            class="appointmentsForm__input"
-            type="number"
-            id="saturdayMade"
-          />
+          <label class="appointments__label" for="saturdayMade">Saturday appointments made</label>
+          <input class="appointments__input" type="number" id="saturdayMade" />
 
-          <label class="appointmentsForm__label" for="saturdayTotal"
-            >Saturday appointments total:</label
-          >
-          <input
-            class="appointmentsForm__input"
-            type="number"
-            id="saturdayTotal"
-          />
+          <label class="appointments__label" for="saturdayTotal">Saturday appointments total</label>
+          <input class="appointments__input" type="number" id="saturdayTotal" />
 
-          <label class="appointmentsForm__label" for="name">First Name:</label>
-          <input class="appointmentsForm__input" type="text" id="name" />
+          <label class="appointments__label" for="name">First Name</label>
+          <input class="appointments__input" type="text" id="name" />
 
-          <label class="appointmentsForm__label" for="lastName"
-            >Last Name:</label
-          >
-          <input class="appointmentsForm__input" type="text" id="lastName" />
+          <label class="appointments__label" for="lastName">Last Name</label>
+          <input class="appointments__input" type="text" id="lastName" />
 
-          <label class="appointmentsForm__label" for="phone">Phone:</label>
-          <input class="appointmentsForm__input" type="text" id="phone" />
+          <label class="appointments__label" for="phone">Phone</label>
+          <input class="appointments__input" type="text" id="phone" />
 
-          <label class="appointmentsForm__label" for="vehicle">Vehicle:</label>
-          <input class="appointmentsForm__input" type="text" id="vehicle" />
+          <label class="appointments__label" for="vehicle">Vehicle</label>
+          <input class="appointments__input" type="text" id="vehicle" />
 
-          <label class="appointmentsForm__label" for="time">Time:</label>
-          <input class="appointmentsForm__input" type="time" id="time" />
+          <label class="appointments__label" for="time">Time</label>
+          <input class="appointments__input" type="time" id="time" />
 
-          <label class="appointmentsForm__label" for="type"
-            >Appointment Type:</label
-          >
-          <select class="appointmentsForm__input" id="type">
+          <label class="appointments__label" for="type">Appointment Type</label>
+          <select class="appointments__input" id="type">
             <option value="same">Same-Day</option>
             <option value="next">Next-Day</option>
           </select>
 
-          <button
-            class="appointmentsForm__button add"
-            type="button"
-            id="addBtn"
-          >
+          <button class="appointments__button appointments__button--add" type="button" id="addBtn">
             Add Appointment
           </button>
+            <div class="appointments__list-container">
+          <h3 class="appointments__list-title">Appointments List</h3>
+          <ul class="appointments__list" id="appointmentList"></ul>
+          <p class="appointments__counter">Same-Day Total: <span id="sameCount">0</span></p>
+          <p class="appointments__counter">Next-Day Total: <span id="nextCount">0</span></p>
+            </div>
+          
 
-          <h3 class="appointmentsForm__listTitle">Appointments List</h3>
-          <ul id="appointmentList"></ul>
-
-          <p>Same-Day Total: <span id="sameCount">0</span></p>
-          <p>Next-Day Total: <span id="nextCount">0</span></p>
-
-          <div class="button-row">
-            <button
-              class="appointmentsForm__button"
-              type="button"
-              id="generateBtn"
-            >
-              Generate Report
-            </button>
-            <button class="appointmentsForm__button" type="button" id="copyBtn">
-              Copy Report
-            </button>
+          <div class="appointments__actions">
+            <button class="appointments__button" type="button" id="generateBtn">Generate Report</button>
+            <button class="appointments__button" type="button" id="copyBtn">Copy Report</button>
           </div>
 
-          <textarea
-            class="appointmentsForm__input" id="appointmentOutput"
-            rows="15"
-            cols="80"
-          ></textarea>
+          <textarea class="appointments__output" id="appointmentOutput"></textarea>
         </form>
       </section>
     </main>
+
+    <footer class="page-footer"></footer>
   </body>
-  <footer> <div></div></footer>
 </html>

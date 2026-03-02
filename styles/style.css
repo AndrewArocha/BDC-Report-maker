@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header {
+  max-width: 768px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.page-header__logo {
+  max-width: 120px;
+}
+
+.page-header__title {
+  font-size: 2.5rem;
+}
+
+.report,
+.appointments {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+body.dark .report,
+body.dark .appointments {
+  background-color: #1e1e1e;
+}
+
+.report__form,
+.appointments__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.report__label,
+.appointments__label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.report__input,
+.report__output,
+.appointments__input,
+.appointments__output {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+body.dark .report__input,
+body.dark .appointments__input,
+body.dark textarea {
+  background-color: #1e1e1e;
+  border-color: #444;
+  color: #f1f1f1;
+}
+
+.report__actions,
+.appointments__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.report__button,
+.appointments__button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.report__toggle {
+  margin-bottom: 20px;
+  align-self: center;
+  background-color: #007bff;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.report__output {
+  margin-top: 20px;
+}
+
+body.dark .report__toggle {
+  background-color: #ff9800;
+  color: #000;
+}
+
+.appointments__title {
+  margin: 40px 0 20px;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.appointments__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.appointments__list-add {
+    font-size: 0.85rem;
+}
+
+.appointmentItem {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #eaeaea;
+}
+
+body.dark .appointmentItem {
+  background-color: #2a2a2a;
+}
+
+.appointments__button--add {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  max-width: 200px;
+  align-self: center;
+}
+
+.appointments__output {
+  margin-top: 20px;
+}
+
+.appointments__list-container {
+  padding: 10px 10px;
+}
