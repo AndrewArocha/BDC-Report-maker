@@ -123,54 +123,90 @@ function StartupAnimation() {
                     }}
                 />
 
-                {/* Text */}
-                {/* Text reveal */}
-                <motion.img
-                    src={eveoText}
-                    alt="Eveo Text"
-                    className="mt-2 w-125 md:w-160"
+                          {/* Text */}
+                          <motion.div
+                              className="relative mt-2 w-125 overflow-visible md:w-150"
 
-                    initial={{
-                          opacity: 0,
-                          y: 20,
-                          scale: 0.94,
-                          filter: 'blur(8px)',
-                      }}
+                              initial={{
+                                  opacity: 0,
+                                  y: 25,
+                                  scale: 0.96,
+                                  filter: 'blur(8px)',
+                              }}
 
-                    animate={{
-                        opacity: 1,
-                        y: 20,
-                        scale: 1,
-                        filter: 'blur(0px)',
-                    }}
+                              animate={{
+                                  opacity: 1,
+                                  y: 20,
+                                  scale: [0.96, 1.03, 1],
+                                  filter: 'blur(0px)',
+                              }}
 
-                    transition={{
-                      opacity: {
-                          duration: 0.8,
-                          delay: 1.7,
-                          ease: 'easeOut',
-                      },
+                              transition={{
+                                  opacity: {
+                                      duration: 0.8,
+                                      delay: 1.7,
+                                      ease: 'easeOut',
+                                  },
 
-                      y: {
-                          duration: 0.8,
-                          delay: 1.7,
-                          ease: 'easeOut',
-                      },
+                                  y: {
+                                      duration: 0.8,
+                                      delay: 1.7,
+                                      ease: [0.22, 1, 0.36, 1],
+                                  },
 
-                      filter: {
-                          duration: 0.7,
-                          delay: 1.7,
-                      },
+                                  filter: {
+                                      duration: 0.7,
+                                      delay: 1.7,
+                                  },
 
-                      scale: {
-                          type: 'spring',
-                          stiffness: 300,
-                          damping: 15,
-                          mass: 1,
-                          delay: 1.8,
-                      },
-                  }}
-                />
+                                  scale: {
+                                      duration: 0.55,
+                                      delay: 1.85,
+                                      times: [0, 0.65, 1],
+                                      ease: [0.34, 1.56, 0.64, 1],
+                                  },
+                              }}
+                          >
+                              {/* Main text */}
+                              <img
+                                  src={eveoText}
+                                  alt="Eveo Text"
+                                  className="relative z-10 w-full"
+                              />
+
+                              {/* Cinematic glow */}
+                              <motion.div
+                                  className="
+                                      absolute
+                                      left-1/2
+                                      bottom-[6px]
+                                      h-14
+                                      w-[78%]
+                                      -translate-x-1/2
+                                      rounded-full
+                                      bg-orange-400/35
+                                      blur-3xl
+                                      pointer-events-none
+                                      z-[1]
+                                  "
+
+                                  initial={{
+                                      opacity: 0,
+                                      scaleX: 0.5,
+                                  }}
+
+                                  animate={{
+                                      opacity: [0, 0.8, 0.18],
+                                      scaleX: [0.5, 1.2, 1],
+                                  }}
+
+                                  transition={{
+                                      duration: 0.8,
+                                      delay: 2.2,
+                                      ease: [0.22, 1, 0.36, 1],
+                                  }}
+                              />
+                          </motion.div>
             </div>
         </main>
     );
