@@ -1,281 +1,279 @@
 * {
-      box-sizing: border-box;
-      margin: 0;
-    }   
-
-body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f4f4f4;
-      color: #111;
-      transition: all 0.3s ease;
-    }
-
-    .container {
-      margin-bottom: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 30px auto;
-    }
-
-.header {
-      margin-bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 768px;
-        margin: 0 auto 30px auto;
-    }
-    
-.reportHeader {
-      margin-bottom: 20px;
-      display: flex;
-        flex-direction: column;
-      align-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 768px;
-    }
-
-.reportTitle {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      text-align: center;
-    }   
-
-.reportForm {
-    display: flex;
-    flex-direction: column;
-      padding: 30px 30px 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin: 0 auto;
-    }
-
-.reportForm__inputs {
-    max-width: 500px;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-    #reportform {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-    }
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+}
+
+.header {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto 30px auto;
+}
+
+.reportHeader {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 768px;
+}
+
+.reportTitle {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.reportForm {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.reportForm__inputs {
+  max-width: 500px;
+}
+
+#reportform {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
 
 #reportForm h2 {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    
-#reportForm label {
-      margin-bottom: 10px;
-      font-weight: bold;
-      width: 100%;
-      flex: 1;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    }
+#reportForm label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 100%;
+  flex: 1;
+}
 
 #reportForm input {
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        transition: all 0.3s ease;
-        }
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
 
-#reportForm input, #reportForm textarea {
-     width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      transition: all 0.3s ease;
-
-    }
+#reportForm input,
+#reportForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
 
 #reportForm button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      margin-right: 5px;
-      cursor: pointer;
-      border-radius: 6px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      transition: 0.3s;
-    }
-    
-    #reportForm button:hover {
-      opacity: 0.85;
-    }
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
 
-    #reportForm .toggle-btn {
-      background-color: #333;
-      margin-bottom: 30px;
-    }
+#reportForm button:hover {
+  opacity: 0.85;
+}
 
-    #reportForm body.dark .toggle-btn {
-      background-color: #ff9800;
-      color: #000;
-    }
+#reportForm .toggle-btn {
+  background-color: #333;
+  margin-bottom: 30px;
+}
 
-    #reportForm textarea {
-      height: 250px;
-      margin-top: 15px;
-    }
-    
+#reportForm body.dark .toggle-btn {
+  background-color: #ff9800;
+  color: #000;
+}
 
-    body.dark {
-      background-color: #121212;
-      color: #f1f1f1;
-    }
+#reportForm textarea {
+  height: 250px;
+  margin-top: 15px;
+}
 
-    input, textarea {
-      padding: 8px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      transition: all 0.3s ease;
-    }
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
 
-    body.dark input,
-    body.dark textarea {
-      background-color: #1e1e1e;
-      color: #f1f1f1;
-      border: 1px solid #444;
-    }
+input,
+textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
 
-    button {
-      padding: 10px 15px;
-      margin-top: 10px;
-      margin-right: 5px;
-      cursor: pointer;
-      border-radius: 6px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      transition: 0.3s;
-    }
+body.dark input,
+body.dark textarea {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
 
-    button:hover {
-      opacity: 0.85;
-    }
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
 
-    .toggle-btn {
-      background-color: #333;
-      width: 200px;
-      margin-bottom: 10px;
-      align-self: center;
-    }
+button:hover {
+  opacity: 0.85;
+}
 
-    body.dark .toggle-btn {
-      background-color: #ff9800;
-      color: #000;
-    }
+.toggle-btn {
+  background-color: #333;
+  width: 200px;
+  margin-bottom: 10px;
+  align-self: center;
+}
 
-    textarea {
-      height: 250px;
-      margin-top: 15px;
-    }
+body.dark .toggle-btn {
+  background-color: #ff9800;
+  color: #000;
+}
 
-    .reportAppointmentTitle {
-          font-size: 2.5em;
-      margin: 30px auto;
-      text-align: center;
-      padding: 30px;
-    }
+textarea {
+  height: 250px;
+  margin-top: 15px;
+}
 
-    .appointmentsForm__section {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        max-width: 768px;
-        width: 100%;
-        margin: 0 auto;
-    }
+.reportAppointmentTitle {
+  font-size: 2.5em;
+  margin: 30px auto;
+  text-align: center;
+  padding: 30px;
+}
 
-    .appointmentsForm {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-      padding: 30px 30px 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin: 0 30px;
-      width: 100%;
-      max-width: 500px;
-    }
+.appointmentsForm__section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-    .appointmentsForm__label {
-        margin-bottom: 10px;
-      font-weight: bold;
-      width: 100%;
-    }
+.appointmentsForm {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 30px 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 30px;
+  width: 100%;
+  max-width: 500px;
+}
 
-    .appointmentsForm__input {
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        transition: all 0.3s ease;
-    }
+.appointmentsForm__label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 100%;
+}
 
-    .appointmentsForm__button {
-        padding: 10px 20px;
-      margin: 10px 0 30px 0;
-      cursor: pointer;
-      border-radius: 6px;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      transition: 0.3s;
-    }
+.appointmentsForm__input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
 
-    .button-row {
-        display: flex;
-        gap: 10px;
-    }
+.appointmentsForm__button {
+  padding: 10px 20px;
+  margin: 10px 0 30px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
 
-    .add {
-        margin-top: 30px;
-        align-self: center;
-        max-width: 250px;
-    }
+.button-row {
+  display: flex;
+  gap: 10px;
+}
 
-    #appointmentList {
-    list-style: none;
-    padding: 0;
-    font-size: 0.8rem;
+.add {
+  margin-top: 30px;
+  align-self: center;
+  max-width: 250px;
+}
+
+#appointmentList {
+  list-style: none;
+  padding: 0;
+  font-size: 0.8rem;
 }
 
 .appointmentItem {
-    display: flex;
-    gap: 1rem;
-    padding: 10px 10px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    background: #1e1e1e;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  gap: 1rem;
+  padding: 10px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #1e1e1e;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .appointmentItem span {
-    flex: 1;
+  flex: 1;
 }
 
 .appointmentListTitle {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .appointmentAddList {
-    
 }

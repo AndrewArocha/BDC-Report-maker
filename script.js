@@ -213,3 +213,9 @@ generateBtn.addEventListener("click", generateAppointmentReport);
 const score = 10;
 score = 15;
 console.log(score);
+
+function calculator (numberone,numbertwo) {
+  sum += numberone + numbertwo;
+  
+}
+console.log(calculator(5,5))
