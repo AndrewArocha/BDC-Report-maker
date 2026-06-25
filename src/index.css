@@ -1,1 +1,24 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* src/index.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  /* Light mode defaults */
+  background-color: #f9fafb;
+  color: #111827;
+
+  /* Smooth transition for theme toggle */
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Dark mode overrides triggered by ThemeContext */
+.dark body {
+  background-color: #05080c;
+  color: #ffffff;
+}
