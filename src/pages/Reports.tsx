@@ -130,7 +130,7 @@ export default function Reports() {
                   onMouseEnter={() => setActiveStoreIndex(index)}
                   className={`
                       relative flex flex-col items-center cursor-pointer outline-none group
-                      ${viewMode === 'grid' ? 'w-32' : 'w-56 md:w-[280px]'}
+                      ${viewMode === 'grid' ? 'w-32' : 'w-56 md:w-70'}
                   `}
                   animate={{
                       scale: isActive && viewMode === 'carousel' ? 1.05 : 1,
@@ -144,17 +144,17 @@ export default function Reports() {
                           bg-black/40 backdrop-blur-2xl border border-white/10
                           shadow-[0_16px_40px_rgba(0,0,0,0.3)]
                           group-hover:border-white/20 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]
-                          ${viewMode === 'grid' ? 'w-32 h-32 rounded-full' : 'w-full aspect-[3/4] rounded-[50%]'}
+                          ${viewMode === 'grid' ? 'w-32 h-32 rounded-full' : 'w-full aspect-3/4 rounded-[50%]'}
                       `}
                       animate={{
                           rotate: viewMode === 'carousel' ? 8 : 0
                       }}
                   >
                       <div className={`absolute inset-0 bg-linear-to-b ${store.bgImage} opacity-60 mix-blend-overlay`} />
-                      <div className="absolute inset-[1px] rounded-[inherit] border border-white/[0.08] pointer-events-none" />
+                      <div className="absolute inset-px rounded-[inherit] border border-white/8 pointer-events-none" />
 
                       <motion.div
-                          className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/[0.15] to-transparent skew-x-12"
+                          className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/15 to-transparent skew-x-12"
                           animate={{ translateX: ['-150%', '250%'] }}
                           transition={{ duration: 3, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
                       />
@@ -210,7 +210,7 @@ export default function Reports() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.05 }}
               onClick={() => handleTypeSelect(type)}
-              className="text-left p-8 rounded-[32px] bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all hover:bg-white dark:hover:bg-white/10 group outline-none focus-visible:ring-2 focus-visible:ring-orange-500 backdrop-blur-md"
+              className="text-left p-8 rounded-4xl bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-orange-500/50 dark:hover:border-orange-500/50 transition-all hover:bg-white dark:hover:bg-white/10 group outline-none focus-visible:ring-2 focus-visible:ring-orange-500 backdrop-blur-md"
             >
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-orange-500 transition-colors">{type.title}</h3>
               <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{type.description}</p>
@@ -400,7 +400,7 @@ function ReportWizard({ store, type, onBack, onFinish }: { store: Store; type: R
                         placeholder="-"
                         />
                         <motion.div
-                        className="absolute bottom-[-1px] left-0 h-[2px] w-0 bg-orange-500"
+                        className="absolute -bottom-px left-0 h-0.5 w-0 bg-orange-500"
                         whileFocus={{ width: '100%' }}
                         />
                     </div>
@@ -480,7 +480,7 @@ function ReportWizard({ store, type, onBack, onFinish }: { store: Store; type: R
                                         key="preview-card"
                                         layoutId={`report-card-${store.id}-${type.id}`}
                                         onClick={() => setIsCardExpanded(true)}
-                                        className="w-[320px] h-[440px] bg-white dark:bg-[#0a0f16] border border-gray-200 dark:border-white/10 rounded-[40px] shadow-2xl overflow-hidden relative group cursor-pointer"
+                                        className="w-[320px] h-110 bg-white dark:bg-[#0a0f16] border border-gray-200 dark:border-white/10 rounded-[40px] shadow-2xl overflow-hidden relative group cursor-pointer"
                                     >
                                         <div className={`absolute top-0 w-full h-32 bg-linear-to-b ${store.bgImage} opacity-30`} />
 
