@@ -1,14 +1,11 @@
-# Appointment Report Generator
+# BDC Report Generator
 
-This project is a lightweight web application built with HTML, CSS, and vanilla JavaScript that allows dealership teams to generate structured daily appointment reports quickly and efficiently.
+A browser-based prototype for automotive Business Development Center (BDC) teams. It explores how dealership staff could organize daily activity and turn same-day and next-day appointments into a report formatted for WhatsApp.
 
-Users can:
-- Add, edit, and delete appointments
-- Separate same-day and next-day appointments
-- Track totals automatically
-- Generate a WhatsApp-ready formatted report
-- Copy the final report with one click
+**Stack:** HTML, CSS, and vanilla JavaScript.
 
-The goal of this project was to practice DOM manipulation, event handling, dynamic rendering, and state management using pure JavaScript without frameworks.
+## Status
 
-# [Report Generator](https://andrewarocha.github.io/BDC-Report-maker/)  
+The current build is a work in progress. The forms are visible, but the appointment actions in the active script are placeholders. Report generation and copying are not ready to use.
+
+[GitHub Pages preview](https://andrewarocha.github.io/BDC-Report-maker/) · [View the active script](./scripts/app.js)
